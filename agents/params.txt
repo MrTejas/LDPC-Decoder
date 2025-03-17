@@ -1,0 +1,23 @@
+snrdb_range = [1.5, 1.5]
+Number of episodes = 200
+Max iters per episode = 100
+Cluster Size = 6
+Learning rate = 0.01
+Discount factor = 0.99
+Epsilon decay = 0.8
+Batch size = 64
+Base Matrix
+ = [[ 0  2 -1  3  0  0 -1 -1 -1 -1]
+ [ 3  1 -1 -1  1  0  0 -1 -1 -1]
+ [ 1 -1  2 -1  0 -1  0 -1 -1 -1]
+ [-1  1 -1  2  3 -1 -1  0 -1 -1]
+ [ 2 -1  2  0 -1  0 -1 -1  0 -1]
+ [ 1 -1  4  0  2 -1  3 -1 -1  0]]
+Architecture
+ = DQN(
+  (fc1): Linear(in_features=5, out_features=64, bias=True)
+  (fc2): Linear(in_features=64, out_features=64, bias=True)
+  (fc3): Linear(in_features=64, out_features=5, bias=True)
+)
+States
+ = [array([0.1 , 0.03, 0.5 , 0.15, 0.06]), array([0.1, 0.7, 0.8, 0.7, 0.3]), array([0.6, 0.8, 0.3, 0.3, 0.5])]
