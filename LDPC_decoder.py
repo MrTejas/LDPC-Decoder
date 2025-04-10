@@ -126,8 +126,8 @@ class Decoder:
             
     def pseudo_row_update(self,a):
         # subtract step (removing known beliefs)
-        p_L = self.L
-        p_sum = self.sum
+        p_L = self.L.copy()
+        p_sum = self.sum.copy()
         
         for j in range(self.num_VN):
             tot = 0
